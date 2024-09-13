@@ -7,10 +7,12 @@ use Services\DrivableInterface;
 abstract class AutomobileClass implements DrivableInterface
 {
     protected string $name;
+    protected string $interior;
 
-    public function __construct($name)
+    public function __construct($name, $interior = 'без отделки')
     {
         $this->name = $name;
+        $this->interior = $interior;
     }
 
     public function driveForward(): void
@@ -31,6 +33,11 @@ abstract class AutomobileClass implements DrivableInterface
     public function activateWipers(): void
     {
         echo "{$this->name} включает дворники\n";
+    }
+
+    public function describeInterior(): void
+    {
+        echo "{$this->name} имеет {$this->interior} отделку салона\n";
     }
 
     /**

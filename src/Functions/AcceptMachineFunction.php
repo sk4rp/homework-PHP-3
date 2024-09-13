@@ -8,5 +8,6 @@ function testDrive(AutomobileClass $automobile): void
     $automobile->driveBackward();
     $automobile->activateSignal();
     $automobile->activateWipers();
+    $automobile->describeInterior();
     $automobile->specialAbility();
 }
