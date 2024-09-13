@@ -23,6 +23,16 @@ abstract class AutomobileClass implements DrivableInterface
         echo "$this->name едет назад\n";
     }
 
+    public function activateSignal(): void
+    {
+        echo "{$this->name} сигналит: 'brrrrrrrrrrrr'\n";
+    }
+
+    public function activateWipers(): void
+    {
+        echo "{$this->name} включает дворники\n";
+    }
+
     /**
      * Метод для особых способностей автомобиля
      * @return void
